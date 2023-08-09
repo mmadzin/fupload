@@ -1,12 +1,12 @@
 package com.baeldung.servlets;
 
-import javax.servlet.ServletException;
-import javax.servlet.annotation.MultipartConfig;
-import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.Part;
+import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.MultipartConfig;
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.Part;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -14,8 +14,8 @@ import java.io.PrintWriter;
 import java.util.Enumeration;
 
 @WebServlet(
-    name = "MultiPartServlet",
-    urlPatterns = {"/multiPartServlet"}
+    name = "FileUpload",
+    urlPatterns = {"/FileUpload"}
 )
 @MultipartConfig(fileSizeThreshold = 1024 * 1024 * 1024, maxFileSize = 1024 * 1024 * 5 * 1024, maxRequestSize = 1024*1024)
 public class FileUpload extends HttpServlet {
